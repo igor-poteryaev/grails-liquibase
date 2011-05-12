@@ -5,9 +5,7 @@ import liquibase.database.DatabaseFactory
 Ant.property(environment: "env")
 grailsHome = Ant.antProject.properties."env.GRAILS_HOME"
 
-includeTargets << new File ( "${grailsHome}/scripts/Init.groovy" )
-includeTargets << new File ( "${grailsHome}/scripts/Package.groovy" )
-includeTargets << new File ( "${grailsHome}/scripts/Bootstrap.groovy" )
+includeTargets << grailsScript("_GrailsBootstrap")
 
 config = new ConfigObject()
 
