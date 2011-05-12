@@ -1,6 +1,6 @@
 includeTargets << new File("${liquibasePluginDir}/scripts/LiquibaseSetup.groovy")
 
-task ('default':'''Lists who currently has locks on the database changelog''') {
+task ('listLocks':'''Lists who currently has locks on the database changelog''') {
     setup()
 
     try {
